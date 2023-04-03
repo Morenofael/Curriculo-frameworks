@@ -1,0 +1,118 @@
+/* fontes */
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@200;600&display=swap');
+
+/* root */
+:root{
+    --cor-primaria: #191825;
+    --cor-secundaria: #865DFF;
+    --cor-terciaria: #E384FF;
+}
+
+/* codigos */
+
+* {
+    margin: 0px;
+}
+
+.cabecalho {
+    margin: 2% 10%;
+}
+
+    .cabecalho nav {
+        display: flex;
+        gap: 2%;
+    }
+
+        .cabecalho nav a {
+            color: var(--cor-primaria);
+        }
+
+body {
+    background-color: var(--cor-primaria);
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+}
+    .site{
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+        .site .container{
+            flex:1;
+        }
+header {
+    background-color: #868686;
+    border-radius: 8px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin: 5% 10% 10% 10%;
+    /* width: 1023px; */
+}
+
+    .container .conteudo {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+        .container .conteudo h1 {
+            font-family: 'Krona One', sans-serif;
+        }
+
+            .container .conteudo h1 span {
+                color: var(--cor-secundaria);
+            }
+
+        .container .conteudo p {
+            font-size: 1.2rem;
+            line-height: 1.5;
+        }
+
+        .container .conteudo .redes-sociais {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+            .container .conteudo .redes-sociais a {
+                width: 200px;
+                border: 2px solid var(--cor-terciaria);
+                padding: 8px 0px;
+                display: flex;
+                justify-content: center;
+                text-decoration: none;
+                border-radius: 10px;
+                gap: 8px;
+            }
+
+            .container .conteudo .redes-sociais a:visited {
+                color: var(--cor-terciaria);
+            }
+
+footer {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 800px){
+    /* body{
+        background-color: yellow;
+    } */
+    .container {
+        flex-direction: column;
+        flex-direction: column-reverse;
+    }
+    .container .conteudo, .container .avatar{
+        width: 100%;
+    }
+    .container .conteudo .redes-sociais a{
+        width: 100%;
+    }
+}
